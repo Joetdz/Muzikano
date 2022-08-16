@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import './App.scss';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import { BrowserRouter, Route, Routes  } from 'react-router-dom';
+import Playlist from './pages/Playlist';
 
 
 
@@ -51,8 +53,16 @@ function App() {
   //   //     <Login></Login>
 
   //   //   </Container>
+  <BrowserRouter>
+  <Routes>
+  
+  <Route path="/artist" element={<Login/>} />
+  <Route path='/' element = {<Home/> } />
+  <Route path= '/playlist' element = {<Playlist/>} />
 
-   <Home/>
+  </Routes>
+  </BrowserRouter>
+   
   );
 }
 
