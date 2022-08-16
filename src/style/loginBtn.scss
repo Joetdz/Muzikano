@@ -1,0 +1,28 @@
+.login-btn{
+    display: flex;
+    justify-content: start;
+    justify-items: start;
+    align-items: center;
+    height: 60px;
+
+   
+    img{
+        border-radius: 23px;
+        height: 60px;
+    }
+    button{
+        border: none;
+        border-radius: 23px;
+        height: 70%;
+        width: 400px;
+        background-color: $Primary-color;
+       height: 60px;
+       
+       
+    }
+    button:hover {
+        background-color: white;
+        }
+  
+   
+}

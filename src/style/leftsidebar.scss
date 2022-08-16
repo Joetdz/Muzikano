@@ -1,0 +1,11 @@
+.left-sidebar{
+    border: solid 1px red;
+    background-color: $Tertiary-color;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-gap: 2%;
+    .logo{
+        width: 100px;
+        padding: 2%;
+    }
+}
