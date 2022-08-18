@@ -3,13 +3,13 @@ import { NavLink } from 'react-router-dom';
 import {  AiFillHome , AiOutlineUsergroupAdd , AiOutlineStepBackward} from  "react-icons/ai";
 
 const Navigation = () => {
-    const [navActive , setNavActiv]=useState('nav-active');
+    const [navActive , setNavActive]=useState('nav-active');
     return (
         <div className="navigation">
             <nav>
 
                 <ul><li>
-                    <NavLink to="/" className={({isActive}) => isActive ? navActive : ""} >
+                    <NavLink to="/home" className={({isActive}) => isActive ? navActive : ""} >
                         <AiFillHome/>Acueil
                     </NavLink>
                         </li>
