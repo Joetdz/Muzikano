@@ -1,5 +1,7 @@
 .left-sidebar{
-
+    position: fixed;
+    width: 19%;
+     height: 100vh;
     background-color: $Tertiary-color;
     display: grid;
     grid-template-rows: 30% 65%;

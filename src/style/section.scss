@@ -1,0 +1,29 @@
+.section{
+  
+    display:grid;
+    .title-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center ; 
+        margin-bottom: 2%;
+    }
+    .title{
+        text-align: start;
+        font-size: 14px;
+        color: white;
+        font-weight: 600;
+    }
+    .more{
+        
+        text-align: end;
+        color: $Primary-color;
+        font-size: 14;
+        font-weight: 700;
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap :2%;
+    }
+}

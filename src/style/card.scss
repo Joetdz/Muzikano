@@ -1,0 +1,64 @@
+.card-body{
+    position: relative;
+    display: grid;
+    grid-template-rows:  repeat(3, 1fr);
+    height: 200px;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+    background-color: $Tertiary-color;
+    border-radius: 4px;
+    transition: 0.4s;
+    .card-image{
+        height: 150px;
+        width: 150px;
+    }
+    .card-title{
+        font-size: 14px;
+        color: white;
+        font-weight: 400;
+        text-align: start;
+        
+    }
+    .card-description{
+        font-size: 14px ;
+        color:$filtre-color;
+        font-weight: 800;
+        text-align: start;
+
+    }
+    .card-btn-play{
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom:0 ;
+        margin: 5%;
+      
+        color: $Primary-color;
+        
+        button{
+            size: 100px;
+            background-color: $Primary-color;
+            border-radius: 50%;
+            border: none;
+          
+        }  
+        button:hover{
+            transform: scale(1.1);
+        }
+    }
+    
+}
+.card-body:hover{
+    background-color: $filtre-color;
+   transform: scale(1.04);
+   
+    .card-description{
+        color: white;
+        font-size: 11px;
+    }
+
+    .card-btn-play{
+        display: block;
+    }
+}

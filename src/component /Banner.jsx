@@ -1,11 +1,13 @@
 import React from 'react';
+import Form from './Form';
 
 const Banner = () => {
     return (
         <div className='banner'>
-            <input type="text" />
-            <img src="img/Bannerimage.png" alt="" />
-                        
+            <div className="form-banner">
+             <Form/>
+            </div>
+            <img src="img/Bannerimage.png" alt="" />     
         </div>
     );
 };

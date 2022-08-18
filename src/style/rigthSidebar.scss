@@ -1,3 +1,10 @@
 .rigth-sidebar{
-    border: solid 1px blue;
+    position: fixed;
+   right: 0;
+    width: 18.4%;
+    margin-left: 10%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 52% 40% ;
+    gap: 10%
 }

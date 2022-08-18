@@ -1,6 +1,8 @@
 $Primary-color:rgba(188, 73, 124, 1);
 $Secondary-color:#020403;
 $Tertiary-color: #272727;
+$filtre-color:rgba(188, 73, 124, 0.6);
+
 *{
     margin: 0px;
     padding: 0px;
@@ -14,6 +16,7 @@ body{
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
+    background-color: $Secondary-color
    
 }
 

@@ -1,4 +1,22 @@
 .main-section{
-    border: solid 1px blue ;
+   
+    position: absolute;
+    width: 60%;
+    height: 200vh;
+    left: 20%;
+    margin: 0% 0.4%;
+    padding: 2% 0%;
 
+    .sections{
+        display: grid;
+        gap: 2%;
+        padding: 2% 0%;
+    }
+    
+   
+    .logo{
+        width: 100px;
+        padding: 8%;
+
+}
 }
