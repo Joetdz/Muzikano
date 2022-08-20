@@ -3,15 +3,16 @@ import { useContext } from 'react';
 import { testContext } from '../contexts';
 import Card from './Card';
 
-const Section = ({title, Artist}) => {
+const Section = ({title, TopArtiste}) => {
 
     const {myTopArtiste,  setMyTopArtiste}=useContext(testContext)
-    console.log(myTopArtiste);
+    console.log('props yefh 22', {TopArtiste});
+
     return (
         <div className='section'>
             <div className='title-section'>
                 <div className='title'>
-                   <h1>{title}</h1>
+                   <h1>{title} </h1>
                 </div>
                 <div className='more'>
                     <span>Voir plus</span>
@@ -29,7 +30,7 @@ const Section = ({title, Artist}) => {
              <Card/>
              <Card/>
              <Card/> */}
-             <Card/>
+             
             </div>
             
         </div>
