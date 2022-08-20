@@ -7,9 +7,9 @@ const Main = () => {
         <div className="main-section">
             <Banner/>
             <div className='sections'>
-                <Section/>
-                <Section/>
-                <Section/>
+                <Section title={'Les Artiste que tu ecoutes le plus'}/>
+                <Section title={'Playlist'}/>
+             
             </div>
     
         </div>

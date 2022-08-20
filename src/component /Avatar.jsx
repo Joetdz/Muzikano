@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Avatar = () => {
+const Avatar = ({image}) => {
     return (
-        <div className='avatar'>
+        <div className='avatar' style={ {backgroundImage:`url(${image})` }}>
             
         </div>
     );

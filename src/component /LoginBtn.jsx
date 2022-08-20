@@ -11,6 +11,6 @@ const LoginBtn = ({href}) => {
             </div>
         </div>
     );
-};
+}
 
 export default LoginBtn;
