@@ -21,6 +21,11 @@ const Navigation = () => {
                         <AiOutlineStepBackward/>playlist
                     </NavLink>
                     </li>
+                    <li>
+                    <NavLink to="/search" className={({isActive}) => isActive ? navActive : ""} >
+                        <AiOutlineStepBackward/>Search
+                    </NavLink>
+                    </li>
                 </ul>
 
             </nav>

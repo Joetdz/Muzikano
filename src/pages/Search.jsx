@@ -1,16 +1,17 @@
 import React from 'react';
+import Banner from '../component /Banner';
 import LeftSidebar from '../component /LeftSidebar';
 import RigthSidebar from '../component /RigthSidebar';
 
-const Playlist = () => {
+const Search = () => {
     return (
-        <div className="playlist-page" >
+        <div className='search-page'>
             <LeftSidebar/>
-            
-            <RigthSidebar/>
+            <Banner />
+            <RigthSidebar />
             
         </div>
     );
 };
 
-export default Playlist;
+export default Search;

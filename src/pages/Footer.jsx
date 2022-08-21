@@ -2,10 +2,12 @@ import React from 'react';
 import SpotifyPlayer from 'react-spotify-web-playback';
 
 const Footer = () => {
+    let token = window.localStorage.getItem('Token')
+    console.log(token)
     return (
         <div className='footer'>
             <SpotifyPlayer
-  token="BQAI_7RWPJuqdZxS-I8XzhkUi9RKr8Q8UUNaJAHwWlpIq6..."
+  token={`${token}`}
   uris={['spotify:artist:6HQYnRM4OzToCYPpVBInuU']} styles={{
     activeColor: '#fff',
     bgColor: '#333',
