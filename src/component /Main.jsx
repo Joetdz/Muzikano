@@ -32,8 +32,8 @@ const Main = () => {
         <div className="main-section">
             <Banner/>
             <div className='sections'>
-                <Section title={'Les Artiste que tu ecoutes le plus'}  TopArtiste={myTopArtiste}/>
-                <Section title={'Les Artiste que tu ecoutes le plus'}  TopArtiste={myTopArtiste}/>
+                <Section title={'Les Artistes que tu ecoutes le plus'}  TopArtiste={myTopArtiste}/>
+                <Section title={'Les Artistes que tu ecoutes le plus'}  TopArtiste={myTopArtiste}/>
                
                 
             </div>
