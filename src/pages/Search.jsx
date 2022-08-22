@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../component /Banner';
 import LeftSidebar from '../component /LeftSidebar';
 import RigthSidebar from '../component /RigthSidebar';
+import Footer from './Footer';
 
 const Search = () => {
     return (
@@ -9,6 +10,9 @@ const Search = () => {
             <LeftSidebar/>
             <Banner />
             <RigthSidebar />
+           
+            
+
             
         </div>
     );

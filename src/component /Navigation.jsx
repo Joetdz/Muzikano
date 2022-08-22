@@ -13,7 +13,7 @@ const Navigation = () => {
                         <AiFillHome/>Acueil
                     </NavLink>
                         </li>
-                        <NavLink to="/" className={({isActive}) => isActive ? navActive : ""} >
+                        <NavLink to="/artist" className={({isActive}) => isActive ? navActive : ""} >
                         <li><AiOutlineUsergroupAdd/>Artist</li>
                     </NavLink>
                     <li>

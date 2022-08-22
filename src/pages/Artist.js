@@ -1,19 +1,14 @@
 import React from 'react';
-import Main from '../component /Main';
 import LeftSidebar from '../component /LeftSidebar';
 import RigthSidebar from '../component /RigthSidebar';
 
-import Footer from './Footer';
-
-const Home = ({topArtist }) => {
+const Artist = () => {
     return (
         <div className="home-page">
             <LeftSidebar/>
-            <Main/>
             <RigthSidebar/>
-        
-        </div>
+       </div>
     );
 };
 
-export default Home;
+export default Artist;

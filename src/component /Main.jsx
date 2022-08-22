@@ -2,44 +2,44 @@ import React from 'react';
 import Banner from './Banner';
 import Section from './Section';
 import { testContext } from '../contexts';
-import { useState , useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 import SpotifyWebApi from 'spotify-web-api-js';
 const Main = () => {
-    const  spotifyApi  =  new  SpotifyWebApi ( ) ;
+  const spotifyApi = new SpotifyWebApi();
   spotifyApi.setAccessToken(window.localStorage.getItem('token'));
-   const [myTopArtiste, setMyTopArtiste ]=useState([])
-   
-  
+  const [myTopArtiste, setMyTopArtiste] = useState([])
+
+
   useEffect(() => {
-  
- spotifyApi.getMyTopArtists('').then(
-       (data)=> {
+
+    spotifyApi.getMyTopArtists('').then(
+      (data) => {
         console.log(data);
         setMyTopArtiste(data.items);
-        
+
 
       },
-     (err) =>{
+      (err) => {
         console.error(err);
       }
     );
 
-  },[])
+  }, [])
 
-    
-    return (
-        <div className="main-section">
-            <Banner/>
-            <div className='sections'>
-                <Section title={'Les Artistes que tu ecoutes le plus'}  TopArtiste={myTopArtiste}/>
-                <Section title={'Les Artistes que tu ecoutes le plus'}  TopArtiste={myTopArtiste}/>
-               
-                
-            </div>
-    
-        </div>
-    );
+
+  return (
+    <div className="main-section">
+      <Banner />
+      <div className='sections'>
+        <Section title={'Les Artistes que tu ecoutes le plus'} TopArtiste={myTopArtiste} />
+        <Section title={'Les Artistes que tu ecoutes le plus'} TopArtiste={myTopArtiste} />
+
+
+      </div>
+
+    </div>
+  );
 };
 
 export default Main;
