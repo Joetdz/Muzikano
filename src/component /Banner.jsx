@@ -1,13 +1,13 @@
 import React from 'react';
 import Form from './Form';
 
-const Banner = () => {
+const Banner = ({img}) => {
     return (
         <div className='banner'>
             <div className="form-banner">
-             <Form/>
+            
             </div>
-            <img src="img/Bannerimage.png" alt="" />     
+            <img src={img} alt="" />     
         </div>
     );
 };

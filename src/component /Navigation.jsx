@@ -9,22 +9,24 @@ const Navigation = () => {
             <nav>
 
                 <ul><li>
-                    <NavLink to="/home" className={({isActive}) => isActive ? navActive : ""} >
-                        <AiFillHome/>Acueil
-                    </NavLink>
-                        </li>
-                        <NavLink to="/artist" className={({isActive}) => isActive ? navActive : ""} >
-                        <li><AiOutlineUsergroupAdd/>Artist</li>
-                    </NavLink>
+                        <NavLink to="/home" className={({isActive}) => isActive ? navActive : ""} >
+                            <AiFillHome/>Acueil
+                        </NavLink>
+                    </li> 
                     <li>
-                    <NavLink to="/playlist" className={({isActive}) => isActive ? navActive : ""} >
-                        <AiOutlineStepBackward/>playlist
-                    </NavLink>
+                        <NavLink to="/artist" className={({isActive}) => isActive ? navActive : ""} >
+                         <AiOutlineUsergroupAdd/>Artist
+                         </NavLink>
                     </li>
                     <li>
-                    <NavLink to="/search" className={({isActive}) => isActive ? navActive : ""} >
-                        <AiOutlineStepBackward/>Search
-                    </NavLink>
+                        <NavLink to="/playlist" className={({isActive}) => isActive ? navActive : ""} >
+                            <AiOutlineStepBackward/>playlist
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/search" className={({isActive}) => isActive ? navActive : ""} >
+                            <AiOutlineStepBackward/>Search
+                        </NavLink>
                     </li>
                 </ul>
 

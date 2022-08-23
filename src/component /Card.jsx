@@ -6,18 +6,21 @@ import { NavLink } from 'react-router-dom';
 import { testContext } from '../contexts';
 import { parseVolume } from 'react-spotify-web-playback/lib/utils';
 
-const Card = ({ type, name, img, id, uri }) => {
+const Card = ({ type, name, img, id, uri, allDetailArtiste }) => {
 
     const { playMusic, setPlayMusic }=useContext(testContext);
+    const {artistDetail , setArtistDetail}=useContext(testContext)
 
     let musicPlaying = ()=>{
         setPlayMusic(uri)
+        setArtistDetail(allDetailArtiste)
+
     }
         
 
     return (
         <div className="card-body" onClick={musicPlaying}>
-            <NavLink to='/artist' >
+            <NavLink to=' /artist' >
                 <div className='card-btn-play'>
 
                     <button>

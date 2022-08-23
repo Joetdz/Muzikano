@@ -9,6 +9,7 @@ import Playlist from './pages/Playlist';
 import { testContext } from './contexts';
 import { useState, useEffect } from 'react';
 import Footer from './pages/Footer';
+import Form from './component /Form';
 
 
 
@@ -19,8 +20,12 @@ function App() {
 
 
   const [logedIn, setLogedIn] = useState(false);
-  console.log(logedIn);
-  const [playMusic , setPlayMusic]=useState('')
+
+  const [playMusic , setPlayMusic]=useState('');
+  const [artistDetail , setArtistDetail]= useState({})
+  console.log(artistDetail);
+
+
 
 
   return (
@@ -28,7 +33,10 @@ function App() {
       logedIn,
       setLogedIn,
       playMusic,
-      setPlayMusic
+      setPlayMusic,
+      artistDetail,
+      setArtistDetail
+
 
     }}>
 
@@ -44,6 +52,7 @@ function App() {
 
       </BrowserRouter>
       {logedIn && <Footer />}
+     {logedIn &&   <Form/> }
 
       {/* <Footer /> */}
 

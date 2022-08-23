@@ -31,7 +31,7 @@ const Section = ({ title, TopArtiste }) => {
             <div className='cards'>
                 {TopArtiste.slice(0, 12).map((artist) => (
 
-                    <Card key={artist.id} id={artist.id} name={artist.name} type={artist.type} img={artist.images[0].url}  uri={artist.uri}/>))
+                    <Card key={artist.id} id={artist.id} name={artist.name} type={artist.type} img={artist.images[0].url}  uri={artist.uri} allDetailArtiste={artist}/>))
 
                 }
 

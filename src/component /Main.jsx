@@ -30,7 +30,7 @@ const Main = () => {
 
   return (
     <div className="main-section">
-      <Banner />
+      <Banner  img="img/Bannerimage.png" />
       <div className='sections'>
         <Section title={'Les Artistes que tu ecoutes le plus'} TopArtiste={myTopArtiste} />
         <Section title={'Les Artistes que tu ecoutes le plus'} TopArtiste={myTopArtiste} />
