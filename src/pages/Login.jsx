@@ -8,8 +8,8 @@ import { testContext } from '../contexts';
 
 const Login = () => {
 
-  const CLIENT_ID = '9b68d415ccba43d0b8ad7349da2a30b3';
-  const REDIRECT_URI = 'http://localhost:3000/';
+  const CLIENT_ID = 'bec8c9ed95414c20817137eb2dbf4e25';
+  const REDIRECT_URI = 'https://muzikano.vercel.app/';
   const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
   const RESPONSE_TYPE = 'token';
   const SCOPE = 'streaming user-follow-read playlist-read-private user-read-private user-read-email user-read-playback-state user-top-read user-library-modify user-library-read user-read-currently-playing playlist-read-private user-read-recently-played  user-modify-playback-state'
