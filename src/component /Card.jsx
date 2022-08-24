@@ -7,9 +7,8 @@ import { testContext } from '../contexts';
 import { parseVolume } from 'react-spotify-web-playback/lib/utils';
 
 const Card = ({ type, name, img, id, uri, allDetailArtiste }) => {
-
+ const {artistDetail , setArtistDetail}=useContext(testContext)
     const { playMusic, setPlayMusic }=useContext(testContext);
-    const {artistDetail , setArtistDetail}=useContext(testContext)
 
     let musicPlaying = ()=>{
         setPlayMusic(uri)

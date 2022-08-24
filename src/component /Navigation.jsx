@@ -13,11 +13,11 @@ const Navigation = () => {
                             <AiFillHome/>Acueil
                         </NavLink>
                     </li> 
-                    <li>
+                    {/* <li>
                         <NavLink to="/artist" className={({isActive}) => isActive ? navActive : ""} >
                          <AiOutlineUsergroupAdd/>Artist
                          </NavLink>
-                    </li>
+                    </li> */}
                     <li>
                         <NavLink to="/playlist" className={({isActive}) => isActive ? navActive : ""} >
                             <AiOutlineStepBackward/>playlist
