@@ -23,13 +23,6 @@ const SectionTracks = ({ title, tracks }) => {
 
                 }
 
-                {/* <Card/>
-             <Card/>
-             <Card/> 
-             <Card/>
-             <Card/>
-             <Card/> */}
-
             </div>
 
         </div>

@@ -32,9 +32,9 @@ const Main = () => {
     <div className="main-section">
       <Banner  img="img/Bannerimage.png" />
       <div className='sections'>
-        <Section title={'Les Artistes que tu ecoutes le plus'} TopArtiste={myTopArtiste} />
-        <Section title={'Les Artistes que tu ecoutes le plus'} TopArtiste={myTopArtiste} />
-
+        <di>  <Section title={'Les Artistes que tu ecoutes le plus'} TopArtiste={myTopArtiste} /></di>
+      
+       <div> <Section title={'Les Artistes que tu ecoutes le plus'} TopArtiste={myTopArtiste} /></div>
 
       </div>
 

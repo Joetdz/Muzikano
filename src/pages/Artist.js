@@ -16,6 +16,9 @@ const Artist = () => {
   const { artistDetail, setArtistDetail } = useContext(testContext)
   const id = artistDetail.id
   const [topTracks, setTopTracks] = useState({})
+  const [topAblum, setAlbums] = useState([])
+  
+
 
   const [loading, setLoading] = useState(true);
 
@@ -39,20 +42,24 @@ const Artist = () => {
 
   }
 
-  // const getArtistAlbums= ()=>{
-  //         spotifyApi.getArtistAlbums(id).then(
-  //             function (data) {
-  //           console.log('Artist albums', data);
-  //           SectionAlbum(data)
-  //         },
-  //         function (err) {
-  //           console.error(err);
-  //         }
-  //       );
-  //     }
+  const getArtistAlbums= ()=>{
+          spotifyApi.getArtistAlbums(id, "CD").then(
+              function (data) {
+            console.log('Artist albums', data.items);
+            setAlbums(data.items)
+            
+          },
+          function (err) {
+            console.error(err);
+          }
+        );
+      }
   useEffect(() => {
     getArtistTopTracks()
-    console.log(topTracks);
+    
+
+    getArtistAlbums()
+
    
   }, [])
   console.log('modify  State tracklist  ', topTracks);
@@ -61,8 +68,11 @@ const Artist = () => {
       {
         loading ? <div>Loading...</div> : 
           <div className="main-section">{artistDetail ? <Banner img={artistDetail.images[0].url} name={artistDetail.name} followers={artistDetail.followers.total} follow='abonnés' /> : <Banner />}
-            <SectionTracks title='Chansons' tracks={topTracks} />
-            
+            <div className='sections'>
+              <SectionTracks title='Chansons' tracks={topTracks} />
+              <SectionAlbum title='Albums' albums={topAblum}/>
+              {/* <SectionAlbum title='Playlists' albums={topAblum}/> */}
+              </div>
           </div>
       }<RigthSidebar />
     </div>
