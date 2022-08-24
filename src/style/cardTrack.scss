@@ -1,0 +1,70 @@
+.cardTrack-body{
+
+    height: 8vh;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $Tertiary-color;
+    border: solid 0.1px ; ;
+    padding: 0.5%;
+    .track-info{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        padding: 2%;
+        gap: 2%;
+        width: 70%;
+    }
+     .card-image{
+        height: 40px;
+        width: 40px;
+        border-radius:2px ;
+        background-position: center;
+        background-size: cover;
+        
+    }
+    .names{
+        display: grid;
+        row-gap: 1%;
+        margin: 0%;
+        width: 100%;
+        .track-name{
+            font-size: 14px;
+            color : white;
+        }
+        .artist{
+            font-size: 16px;
+            font-weight: bolder;
+            color: $Primary-color;
+        }
+    }
+
+    .duration{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        color: white;
+        font-size: 12px;
+
+    }
+    button{
+        size: 100px;
+        background-color: $Primary-color;
+        border-radius: 50%;
+        border: none;
+      
+    }  
+    button:hover{
+        transform: scale(1.1);
+    }
+}
+    
+.cardTrack-body:hover{
+background-color: $filtre-color;
+   transform: scale(1.04);
+   .artist{
+    font-size: 16px;
+    font-weight: 900;
+    color: white ;
+}
+}

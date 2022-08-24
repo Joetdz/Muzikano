@@ -23,7 +23,7 @@ function App() {
 
   const [playMusic , setPlayMusic]=useState('');
   const [artistDetail , setArtistDetail]= useState({})
-  console.log(artistDetail);
+  console.log('details',artistDetail);
 
 
 
@@ -51,10 +51,11 @@ function App() {
         </Routes>
 
       </BrowserRouter>
-      {logedIn && <Footer />}
-     {logedIn &&   <Form/> }
-
-      {/* <Footer /> */}
+      {logedIn&& <Footer />}
+     {logedIn&& <Form/> }
+     {/* {  <Form/>   } */}
+{/* 
+      <Footer /> */}
 
     </testContext.Provider>
 

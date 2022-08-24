@@ -46,11 +46,11 @@ const Form = () => {
                 <input type="text"  placeholder="Cherchez artistes, chansons , album "  onChange={(e)=>{
                             setSearch(e.target.value)
                         } }/>
-                <input type="submit" value="cherchez"></input>
+                {/* <input type="submit" value="cherchez"></input> */}
             </form>
         
         </div>
-    ); 
+    );  
 };
 
 export default Form;
