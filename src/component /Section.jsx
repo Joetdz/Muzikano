@@ -12,7 +12,7 @@ const Section = ({ title, TopArtiste }) => {
 
     useEffect(() => {
         setTopArtisteData({ TopArtiste })
-        setTopArtisteData({ TopArtiste })
+
     }, [])
     console.log(TopArtiste);
     // const {myTopArtiste,  setMyTopArtiste}=useContext(testContext)
@@ -29,9 +29,9 @@ const Section = ({ title, TopArtiste }) => {
                 </div>
             </div>
             <div className='cards'>
-                {TopArtiste.slice(0, 12).map((artist) => (
-
-                    <Card key={artist.id} id={artist.id} name={artist.name} type={artist.type} img={artist.images[0].url}  uri={artist.uri} allDetailArtiste={artist}/>))
+                {TopArtiste && TopArtiste.slice(0, 12).map((artist) => (
+                    artist &&
+                    <Card key={artist.id} id={artist.id} name={artist.name} type={artist.type} img={artist && artist.images && artist.images.length > 0 ? artist.images[0].url : ''} uri={artist.uri} allDetailArtiste={artist} />))
 
                 }
 

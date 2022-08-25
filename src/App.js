@@ -24,6 +24,10 @@ function App() {
   const [playMusic , setPlayMusic]=useState('');
   const [artistDetail , setArtistDetail]= useState({})
   console.log('details',artistDetail);
+  const [resultsTrack , setResulstTrack]=useState([])
+  const [resultsArtist , setResulstArtist]=useState([])
+  const [resultsAblum , setResultsAblum]=useState([])
+  const [resultsPlaylist, setResultPlaylist]=useState([])
 
 
 
@@ -35,7 +39,15 @@ function App() {
       playMusic,
       setPlayMusic,
       artistDetail,
-      setArtistDetail
+      setArtistDetail,
+      resultsTrack , 
+      setResulstTrack,
+      resultsArtist , 
+      setResulstArtist,
+      resultsAblum , 
+      setResultsAblum,
+      resultsPlaylist, 
+      setResultPlaylist
 
 
     }}>
@@ -50,9 +62,10 @@ function App() {
           <Route path='/artist' element={<Artist />} />
         </Routes>
 
+        {logedIn&& <Form/> }
       </BrowserRouter>
       {logedIn&& <Footer />}
-     {logedIn&& <Form/> }
+    
      {/* {  <Form/>   } */}
 {/* 
       <Footer /> */}

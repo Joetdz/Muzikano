@@ -16,7 +16,6 @@ const SectionTracks = ({ title, tracks }) => {
             </div>
             <div className='cardTracks'>
 
-
                 {tracks.slice(0, 12).map((track) => (
 
                     <CardTrack key={track.id} trackTitle={track.name} image={track.album.images[0].url} duration={track.duration_ms}  uri={track.uri}/>))
