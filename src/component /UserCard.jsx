@@ -11,12 +11,14 @@ const UserCard = () => {
   spotifyApi.setAccessToken(window.localStorage.getItem('token'));
 
   const [user, setUser] = useState()
-  const { logedIn, setLogedIn } = useContext(testContext)
+  const { logedIn, setLogedIn , } = useContext(testContext)
+ 
+  
   const getMe = () => {
     spotifyApi.getMe().then(
       function (data) {
 
-        setUser()
+        setUser(data)
         console.log('user ', data);
       },
       function (err) {
@@ -45,9 +47,9 @@ const UserCard = () => {
 
     <div className='user-card'>
 
-      <Avatar />
+    
       <div className='user-name'>
-        <h2>Joel tondozi</h2>
+       
       </div>
       <div className="logout-link">
         <button onClick={logout} >deconnexion</button>

@@ -4,23 +4,26 @@ form{
     margin-top: 8;
     width: 100%;
     left: 36%;
-    border-radius: 12px;
-    background-color: transparent;
+    border-radius: 7px;
+    background-color: white;
     border: solid 1px rgb(248, 245, 245); 
-    
+    align-items: center;
+    justify-items: center;
+    padding: 0 2%;
+
     input {
         all: unset;
       }
     width: 25%;
     height: 30px;
-    background-color:transparent;
+    background-color:white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     input[type='text']{
         
-        background-color: transparent; 
-        color:white;
+        background-color: white;
+        color:$Secondary-color;
         font-size: 12px;
         font-weight: 800;
         
