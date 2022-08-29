@@ -51,8 +51,8 @@ const UserCard = () => {
   return (<>
   { isLoading?<div></div>:
     <div className='user-card' >
-      <div className='user-avatar'>
-        d
+      <div className='user-avatar'  style={ {backgroundImage:`url(${user.images[0].url})` }}>
+        
       </div>
       <div className='user-name'>
         {user.display_name} 

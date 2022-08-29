@@ -30,7 +30,7 @@ const Navigation = () => {
                     </li>
                 </ul>
 
-            </nav>
+            </nav>n 
         </div>
     );
 };
