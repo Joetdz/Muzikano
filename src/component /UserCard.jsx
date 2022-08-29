@@ -4,14 +4,16 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { useState, useEffect } from 'react';
 import { testContext } from '../contexts';
-
+import {AiOutlineLogout} from 'react-icons/ai'
 
 const UserCard = () => {
   const spotifyApi = new SpotifyWebApi();
   spotifyApi.setAccessToken(window.localStorage.getItem('token'));
 
   const [user, setUser] = useState()
+  const [isLoading, setIsLoading]=useState(true)
   const { logedIn, setLogedIn , } = useContext(testContext)
+  console.log(isLoading)
  
   
   const getMe = () => {
@@ -19,16 +21,19 @@ const UserCard = () => {
       function (data) {
 
         setUser(data)
+        setIsLoading(false) 
         console.log('user ', data);
+
       },
       function (err) {
         console.error(err);
       }
-    );
+    )
   }
 
   useEffect(() => {
     getMe()
+    console.log(isLoading)
     if  (logedIn == false){navigate('/')}
   }, [])
 
@@ -40,23 +45,25 @@ const UserCard = () => {
     setLogedIn(false)
     console.log('token effacé', { logedIn });
     navigate('/')
-    
+    console.log(user.display_name)
   }
  
-  return (
-
-    <div className='user-card'>
-
-    
+  return (<>
+  { isLoading?<div></div>:
+    <div className='user-card' >
+      <div className='user-avatar'>
+        d
+      </div>
       <div className='user-name'>
-       
+        {user.display_name} 
       </div>
       <div className="logout-link">
-        <button onClick={logout} >deconnexion</button>
+        <button onClick={logout}>Deconnexion<span classeName='logout-icon'><AiOutlineLogout/></span></button>
 
       </div>
 
-    </div>
+    </div>}</>
+
   );
 };
 

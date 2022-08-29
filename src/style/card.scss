@@ -71,3 +71,12 @@
         display: block;
     }
 }
+@media screen  and (max-width :900px){
+    .card-body{
+        height: 100px;
+    }
+    .card-image{
+        height: 50px;
+        width: 50px;
+    }
+}

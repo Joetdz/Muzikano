@@ -21,9 +21,9 @@ const Footer = () => {
         styles={{
           activeColor: '#fff',
           bgColor: '#333',
-          color: '#fff',
+          color: '#BC497C',
           loaderColor: '#fff',
-          sliderColor: '#1cb954',
+          sliderColor: '#BC497C',
           trackArtistColor: '#ccc',
           trackNameColor: '#fff',
         }}

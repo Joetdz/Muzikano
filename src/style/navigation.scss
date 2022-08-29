@@ -20,3 +20,32 @@
     background-color: $filtre-color;
    }
 }
+@media screen  and (max-width:900px){
+   .navigation{
+      li{
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      gap: 2px;
+      justify-content: space-between;
+
+   }
+      
+   ul {
+      display:flex;  
+      list-style:none;
+      justify-content: space-between;
+      width: 100%;
+     }
+
+     a{
+      text-decoration: none;
+     
+      width: 100px;
+      color: white;
+      border-radius: 10px;
+      
+     }
+   }
+   
+}

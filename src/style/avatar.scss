@@ -7,3 +7,15 @@
     background-position: center;
     background-size: cover;
 }
+@media screen and (max-width : 900px) {
+    .avatar{
+        background-color: aliceblue;
+        border-radius: 50%;
+        height: 50px;
+        width:50px;
+        background: url("../stephbae.jpeg");
+        background-position: center;
+        background-size: cover;
+    }
+    
+}
