@@ -49,9 +49,9 @@ const UserCard = () => {
   }
  
   return (<>
-  { isLoading?<div></div>:
-    <div className='user-card' >
-      <div className='user-avatar'  style={ {backgroundImage:`url(${user.images[0].url})` }}>
+  
+    <div className='user-card' > { isLoading?<div></div>:
+     <> <div className='user-avatar'  style={ {backgroundImage:`url(${user.images[0].url})` }}>
         
       </div>
       <div className='user-name'>
@@ -60,9 +60,9 @@ const UserCard = () => {
       <div className="logout-link">
         <button onClick={logout}>Deconnexion<span classeName='logout-icon'><AiOutlineLogout/></span></button>
 
-      </div>
+      </div></>}
 
-    </div>}</>
+    </div></>
 
   );
 };

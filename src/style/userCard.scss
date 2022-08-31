@@ -1,10 +1,11 @@
 .user-card{
-    height: 7vh;
+    height: 8vh;
     background-color: $Tertiary-color;
-    border-radius: 8px;
+    border-radius: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2%;
    
     button{
         all: unset;
@@ -41,7 +42,7 @@
         border: solid 2px white ;
         background-size: cover;
         background-position: center;
-        
+
     }
 
 

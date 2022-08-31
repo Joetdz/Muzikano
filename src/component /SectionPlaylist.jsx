@@ -1,4 +1,5 @@
 import React from 'react';
+import CardPlaylist from './CardPlaylist';
 
 const SectionPlaylist = ({title}) => {
     return (
@@ -12,6 +13,12 @@ const SectionPlaylist = ({title}) => {
             </div>
         </div>
         <div className='cards'>
+              { albums.map((album)=>( 
+                 <CardPlaylist key={album.id} name={album.name}  type={album.album_group} image={album.images[0].url} uri={album.uri}/>
+              ))}
+          
+           
+
             {/* {TopArtiste.slice(0, 12).map((artist) => (
 
                 <Card key={artist.id} id={artist.id} name={artist.name} type={artist.type} img={artist.images[0].url}  uri={artist.uri} allDetailArtiste={artist}/>))
