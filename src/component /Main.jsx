@@ -14,6 +14,7 @@ const Main = () => {
 
 
   useEffect(() => {
+    setTimeout(()=>{
 
     spotifyApi.getMyTopArtists('').then(
       (data) => {
@@ -26,6 +27,7 @@ const Main = () => {
         console.error(err);
       }
     );
+  },500)
 
   }, [])
   const minIndex=1;
