@@ -34,7 +34,7 @@
 }
 @media screen and (max-width: 900px){
     .section{
-  
+        position: sticky;
         display:grid;
         .title-section{
             display: flex;

@@ -7,6 +7,7 @@ import { useState } from 'react';
 import SectionTracks from '../component /SectionTracks';
 import SectionAlbum from '../component /SectionAlbum';
 import SpotifyWebApi from 'spotify-web-api-js';
+import LoadingSpin from 'react-loading-spin';
 
 
 const Artist = () => {
@@ -64,7 +65,8 @@ const Artist = () => {
   return (
     <div className="home-page"><LeftSidebar />
       {
-        loading ? <div>Loading...</div> : 
+        loading ? <span className='loader'><LoadingSpin primaryColor="rgba(188, 73, 124, 1)"
+        secondaryColor="#333"/></span> : 
           <div className="main-section">{artistDetail? <Banner img={artistDetail.images[0].url} name={artistDetail.name} followers={artistDetail.followers.total} follow='abonnés' /> : <Banner />}
             <div className='sections'>
              {topTracks&&<SectionTracks title='Chansons' tracks={topTracks} />}

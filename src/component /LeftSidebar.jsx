@@ -6,7 +6,7 @@ const LeftSidebar = () => {
     return (
         <div className='left-sidebar'>
             <div className="logo">
-            <Logo/>
+                 <Logo/>
             </div>
 
             <div className='nav'>

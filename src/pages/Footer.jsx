@@ -27,7 +27,7 @@ const Footer = () => {
           trackArtistColor: '#ccc',
           trackNameColor: '#fff',
         }}
-      />;
+      />
 
     </div>
   );

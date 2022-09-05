@@ -58,7 +58,7 @@ const UserCard = () => {
         {user.display_name} 
       </div>
       <div className="logout-link">
-        <button onClick={logout}>Deconnexion<span classeName='logout-icon'><AiOutlineLogout/></span></button>
+        <button onClick={logout}><span classeName='logout-icon'><AiOutlineLogout/></span></button>
 
       </div></>}
 
