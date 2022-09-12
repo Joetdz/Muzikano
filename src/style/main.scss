@@ -1,21 +1,38 @@
 .main-section{
     position:absolute;
     width: 60%;
-    height: 200vh;
+    
     left: 20%;
     margin: 0% 0.4%;
-   
-    
+
     .sections{
         display: grid;
-        row-gap: 4%;
-             
+        row-gap: 4%;       
     }
-
+    .loader{
+        position: absolute;
+       
+      
+        
+    }
    
     .logo{
         width: 100px;
         padding: 8%;
-
+    }   
 }
+@media screen and (max-width: 900px){
+    .main-section{
+        width: 100%;
+        position: relative;
+        left: 0%;
+        margin-bottom:25vh ;
+        padding-bottom:50% ;
+        
+     
+        
+
+    }
+       
+    
 }

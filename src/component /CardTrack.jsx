@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsFillPlayCircleFill } from 'react-icons/bs';
+import { BsFillPlayCircleFill, BsPauseCircleFill } from 'react-icons/bs';
 import { testContext } from '../contexts';
 import { useContext } from 'react';
 
@@ -34,8 +34,8 @@ const CardTrack = ({image, trackTitle,artist,duration,uri}) => {
             <span>{timeConvert(duration)}</span>
             <button>
 
-                
-                <BsFillPlayCircleFill fontSize={40} color={'black'} className='icon-paly' />
+                {  playMusic==uri?  <BsPauseCircleFill fontSize={40} color={'black'} className='icon-paly' />:  <BsFillPlayCircleFill fontSize={40} color={'black'} className='icon-paly' />} 
+               
             </button>
         </div>
             

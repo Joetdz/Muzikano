@@ -4,6 +4,7 @@ import LeftSidebar from '../component /LeftSidebar';
 import RigthSidebar from '../component /RigthSidebar';
 
 import Footer from './Footer';
+import Banner from '../component /Banner';
 
 const Home = ({topArtist }) => {
     return (

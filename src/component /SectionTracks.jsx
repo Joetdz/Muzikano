@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import CardTrack from './CardTrack';
 
-const SectionTracks = ({ title, tracks }) => {
-    console.log( 'props',tracks);
+const SectionTracks = ({ title, tracks, tracksRecentlyplayed }) => {
+    console.log( 'liste des track',tracks);
  
     return (
         <div className='section'>
@@ -16,10 +16,15 @@ const SectionTracks = ({ title, tracks }) => {
             </div>
             <div className='cardTracks'>
 
-                {tracks.slice(0, 12).map((track) => (
+                {
+                     tracks&& tracks.slice(0, 12).map((track) => (
 
-                    <CardTrack key={track.id} trackTitle={track.name} image={track.album.images[0].url} duration={track.duration_ms}  uri={track.uri}/>))
+                    <CardTrack key={track.id} trackTitle={track.name} image={track.album&&track.album.images[0].url} duration={track.duration_ms}  uri={track.uri}/>))
+                }
+                {
+                     tracksRecentlyplayed&&tracksRecentlyplayed.slice(0, 12).map((track) => (
 
+                        <CardTrack key={track.track.id} trackTitle={track.track.name} image={track.track.album&&track.track.album.images[0].url} duration={track.track.duration_ms}  uri={track.track.uri}/>))
                 }
 
             </div>

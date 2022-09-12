@@ -9,3 +9,11 @@
     background-color: $Secondary-color;
 
 }
+@media screen and (max-width:900px){
+    .search-page{
+        grid-template-columns: 100%;
+        padding: 2%;
+    }
+
+    
+}

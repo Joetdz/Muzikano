@@ -17,7 +17,7 @@
         
         text-align: end;
         color: $Primary-color;
-        font-size: 14;
+        font-size: 14px;
         font-weight: 700;
     }
 
@@ -30,5 +30,41 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap :2%;
+    }
+}
+@media screen and (max-width: 900px){
+    .section{
+        position: sticky;
+        display:grid;
+        .title-section{
+            display: flex;
+            justify-content: space-between;
+            align-items: center ; 
+            margin-bottom: 4%;
+        }
+        .title{
+            text-align: start;
+            font-size: 11px;
+            color: white;
+            font-weight: 600;
+        }
+        .more{
+            
+            display: none;
+        }
+
+        .cards{
+            
+            display: inline-block;
+            overflow: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            gap :1%;
+        }
+        .cardTracks{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap :2%;
+        }
     }
 }

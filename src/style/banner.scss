@@ -22,4 +22,33 @@
             font-size: 18px;
         }
     }
+
+}
+
+@media screen and (max-width:900px){
+    .banner{
+        
+        bottom: 25vh;
+        height: 25vh;
+        position: static;
+        z-index: 14;
+    
+
+    .banner-details{
+        position: absolute;
+        display:  grid;
+        grid-template-rows: repeat(2,1fr);
+        gap: 5%;
+        justify-content: end;
+        top: 8%;
+        padding:0% 10%;
+        background-color: $Tertiary-color;
+        border-radius: 23px;
+
+        .name{
+            color: white;
+            font-size: 14px;
+        }
+    }
+}
 }
