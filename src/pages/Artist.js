@@ -17,6 +17,8 @@ const Artist = () => {
   const id = artistDetail.id
   const [topTracks, setTopTracks] = useState({})
   const [topAblum, setAlbums] = useState([])
+  
+
 
   const [loading, setLoading] = useState(true);
 
@@ -26,13 +28,14 @@ const Artist = () => {
   const getArtistTopTracks = () => {
     spotifyApi.getArtistTopTracks(id, "CD").then(
        (data)=> {
+        console.log('ArtistTracks fetching ', data);
         setTopTracks(data.tracks)
-        console.log('les data',data.tracks);
+       
       },
        (err)=> {
         console.error(err);
       }
-    ).then(
+    ).then(() => setLoading(false)
     
     )
 
@@ -41,9 +44,8 @@ const Artist = () => {
   const getArtistAlbums= ()=>{
           spotifyApi.getArtistAlbums(id, "CD").then(
               function (data) {
-           
+            console.log('Artist albums', data.items);
             setAlbums(data.items)
-            console.log('les data',data.items)
             
           },
           function (err) {
@@ -52,27 +54,29 @@ const Artist = () => {
         );
       }
   useEffect(() => {
-   
     getArtistTopTracks()
-  
+    
+
     getArtistAlbums()
 
    
-  }, [topTracks])
-  
+  }, [])
+  console.log('modify  State tracklist  ', topTracks);
   return (
-    <div className="home-page"><LeftSidebar />
-      {
-        
-          <div className="main-section">{loading ? <span className='loader'><LoadingSpin primaryColor="rgba(188, 73, 124, 1)"
-          secondaryColor="#333"/></span> :<><Banner img={artistDetail.images&&artistDetail.images[0].url} name={artistDetail.name&&artistDetail.name} followers={artistDetail.followers&&artistDetail.followers.total} follow='abonnés' />  <Banner /></>}
-            <div className='sections'>
-            {/* {artistDetail.name?<SectionTracks title='Chansons' tracks={topTracks&&topTracks} />:''} */}
-              {artistDetail.name?<SectionAlbum title='Albums' albums={topAblum&&topAblum}/>:''}
-             
-              </div>
-          </div>
-      }<RigthSidebar />
+    <div className="home-page">
+      <LeftSidebar />
+          {  loading ? <span className='loader'><LoadingSpin primaryColor="rgba(188, 73, 124, 1)"
+            secondaryColor="#333"/></span> : 
+      <div className="main-section">
+        {artistDetail? <Banner img={artistDetail.images[0].url} name={artistDetail.name} followers={artistDetail.followers.total} follow='abonnés' /> : <Banner />}
+                <div className='sections'>
+                {topTracks&&<SectionTracks title='Chansons' tracks={topTracks} />}
+                  {topAblum&&<SectionAlbum title='Albums' albums={topAblum}/>}
+                  {/* <SectionAlbum title='Playlists' albums={topAblum}/> */}
+                  </div>
+      </div>
+          }
+      <RigthSidebar />
     </div>
   );
 };
