@@ -30,7 +30,7 @@ const getUserTopartiste=()=>{
 const getTracksRecentlyPlayed=()=>{
   spotifyApi.getMyRecentlyPlayedTracks().then((data)=>{
     setRecentlyPlayed(data.items)
-    console.log(data.items)
+    
       
   })
 }
@@ -40,11 +40,6 @@ const getTracksRecentlyPlayed=()=>{
       getTracksRecentlyPlayed();
      
      getUserTopartiste();
-    
-      console.log(' recent',recentlyPlayed)
-    
-
-   
   },1000)
 
   }, [])

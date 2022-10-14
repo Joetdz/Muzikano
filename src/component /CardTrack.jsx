@@ -21,7 +21,7 @@ const CardTrack = ({image, trackTitle,artist,duration,uri}) => {
           
 
     return (
-        <div className='cardTrack-body' onClick={musicPlaying}>
+        <div className='cardTrack-body' >
         <div className='track-info'>
             <div className='card-image' style={ {backgroundImage:`url(${image})` }}>
             </div>
@@ -32,7 +32,7 @@ const CardTrack = ({image, trackTitle,artist,duration,uri}) => {
         </div>
         <div className='duration'>
             <span>{timeConvert(duration)}</span>
-            <button>
+            <button onClick={musicPlaying}>
 
                 {  playMusic==uri?  <BsPauseCircleFill fontSize={40} color={'black'} className='icon-paly' />:  <BsFillPlayCircleFill fontSize={40} color={'black'} className='icon-paly' />} 
                

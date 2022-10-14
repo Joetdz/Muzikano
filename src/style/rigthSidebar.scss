@@ -6,7 +6,9 @@
     height: 100vh;
     display: grid;
     grid-template-rows: 52% 40% ;
-    gap: 10%
+    gap: 10%;
+    background-color: $Tertiary-color;
+    
 }
 @media screen and (max-width: 900px) {
     .rigth-sidebar{

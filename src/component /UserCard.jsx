@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Avatar from './Avatar';
 import { Navigate, useNavigate } from 'react-router-dom';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { useState, useEffect } from 'react';

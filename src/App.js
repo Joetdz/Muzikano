@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Search from './pages/Search';
 import Artist from './pages/Artist';
-import { BrowserRouter, Navigate, Route, Routes, } from 'react-router-dom';
+import {   Route, Routes, } from 'react-router-dom';
 import Playlist from './pages/Playlist';
 import { testContext } from './contexts';
 import { useState, useEffect } from 'react';
@@ -53,8 +53,8 @@ function App() {
 
     }}>
 
-      <BrowserRouter>
-        <Routes>
+    
+{logedIn? <><Routes>
 
           <Route path="/" element={<Login />} />
           <Route path='home' element={<Home />} />
@@ -63,13 +63,11 @@ function App() {
           <Route path='/artist' element={<Artist />} />
         </Routes>
 
-        {logedIn&& <Form/> }
-      </BrowserRouter>
-      {logedIn&& <Footer />}
+        <Form/> 
+     
+       <Footer /></>:<Login/> }
     
-     {/* {  <Form/>   } */}
-{/* 
-      <Footer /> */}
+   
 
     </testContext.Provider>
 

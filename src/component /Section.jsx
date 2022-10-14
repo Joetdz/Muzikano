@@ -1,9 +1,8 @@
 
-import { useContext } from 'react';
-import { testContext } from '../contexts';
+
 import Card from './Card';
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+
 
 const Section = ({ title, TopArtiste }) => {
 
@@ -14,10 +13,8 @@ const Section = ({ title, TopArtiste }) => {
         setTopArtisteData({ TopArtiste })
 
     }, [])
-    console.log(TopArtiste);
-    // const {myTopArtiste,  setMyTopArtiste}=useContext(testContext)
-    // console.log('props yefh', {myTopArtiste});
-
+  
+   
     return (
         <div className='section'>
             <div className='title-section'>
@@ -35,12 +32,7 @@ const Section = ({ title, TopArtiste }) => {
 
                 }
 
-                {/* <Card/>
-             <Card/>
-             <Card/> 
-             <Card/>
-             <Card/>
-             <Card/> */}
+               
 
             </div>
 

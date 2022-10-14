@@ -2,47 +2,53 @@ form{
     position: absolute;
     top: 2%;
     margin-top: 8;
-    width: 100%;
     left: 36%;
     border-radius: 7px;
     background-color: white;
-    border: solid 1px rgb(248, 245, 245); 
     align-items: center;
     justify-items: center;
     padding: 0 2%;
 
     input {
         all: unset;
+        width: 95%;
       }
-    width: 25%;
+      width:25%;
     height: 30px;
-    background-color:white;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     input[type='text']{
         
-        background-color: white;
-        color:$Secondary-color;
+        
         font-size: 12px;
         font-weight: 800;
         
     }
     ::placeholder {
+       
+        margin: 2%;
+        text-align: start;
+        
+   
+    }
+   
+ 
+
+   
+}
+@media screen and (max-width:900px){
+    input[type='text']{
+        width: 100%;
+       
+        font-size: 8px;
+       
+        
+    }
+    ::placeholder {
         color:white ;
-   
+        font-size:12px;
     }
-   
-    // input[type='submit']{
-    //     background-color: $Primary-color;
-    //     width: 25%;
-    //     height: 100%;
-    //     padding-left:10px;
-    //     border-radius: 12px;
-    //     color: white;
-    // }
-    input[type='submit']:hover{
-        background-color: $Secondary-color;
-    }
-   
+    
 }

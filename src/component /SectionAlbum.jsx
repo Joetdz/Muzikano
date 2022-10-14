@@ -20,19 +20,7 @@ const SectionAlbum = ({title , albums}) => {
               
                
 
-                {/* {TopArtiste.slice(0, 12).map((artist) => (
-
-                    <Card key={artist.id} id={artist.id} name={artist.name} type={artist.type} img={artist.images[0].url}  uri={artist.uri} allDetailArtiste={artist}/>))
-
-                } */}
-
-                {/* <Card/>
-             <Card/>
-             <Card/> 
-             <Card/>
-             <Card/>
-             <Card/> */}
-
+            
             </div>
 
         </div>

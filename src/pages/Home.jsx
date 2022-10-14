@@ -10,7 +10,7 @@ const Home = ({topArtist }) => {
     return (
         <div className="home-page">
             <LeftSidebar/>
-            <Main/>
+             <Main/>
             <RigthSidebar/>
         
         </div>

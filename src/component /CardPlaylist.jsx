@@ -16,7 +16,7 @@ const CardPlaylist = ({type, name, image, id, uri, al }) => {
     return (
 
         <div className="card-body" onClick={musicPlaying}>
-            <NavLink to='/artist' >
+            <NavLink to='/playlist' >
                 <div className='card-btn-play'>
 
                     <button>
