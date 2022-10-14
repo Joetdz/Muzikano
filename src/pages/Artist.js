@@ -65,8 +65,8 @@ const Artist = () => {
   return (
     <div className="home-page">
       <LeftSidebar />
-          {  loading ? <span className='loader'><LoadingSpin primaryColor="rgba(188, 73, 124, 1)"
-            secondaryColor="#333"/></span> : 
+          {  loading ?  <div className="main-section"> <span className='loader'><LoadingSpin primaryColor="rgba(188, 73, 124, 1)"
+            secondaryColor="#333"/></span> </div>: 
       <div className="main-section">
         {artistDetail? <Banner img={artistDetail.images[0].url} name={artistDetail.name} followers={artistDetail.followers.total} follow='abonnés' /> : <Banner />}
                 <div className='sections'>
